@@ -85,10 +85,17 @@ section {
     font-size: 3rem;
     font-family: cursive;
 }
+.sample {
+    display: inline-flex;
+    justify-content: center;
+    width: 33vw;
+    float: none;
+}
 #photo {
-    float: left;
-    border: 2px solid red;
+    /* float: none; */
+    /* border: 2px solid red; */
     /* padding: 0 10px; */
+    width: 100%;
     /* background: red; */
 }
 #photo p {
@@ -97,11 +104,13 @@ section {
     color: blue;
 }
 #photo2 {
-    margin-left: 10px;
-    border: solid red 2px;
+    /* margin-left: 10px; */
+    /* border: solid red 2px; */
     display: inline-block;
     position: absolute;
-    left: 255px;
+    /* left: 255px; */
+    width: 33vw;
+    left: 33%;
     /* background: green; */
 }
 #photo2 p {
@@ -110,13 +119,13 @@ section {
     color: blue;
 }
 #photo3 {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     position: absolute;
-    width: 275px;
+    /* width: 265px; */
     /* width: 100%; */
     /* padding: 0 10px; */
-    left: 600px;
-    display:block;
+    left: 66%;
+    display: inline-block;
 }
 #photo3 p {
     text-align: center;
@@ -125,6 +134,10 @@ section {
 }
 
 @media screen and (max-width: 575px) {
+    body {
+        width: 100%;
+        overflow: auto;
+    }
     #title::before {
         content: '';
         display: block;
@@ -137,5 +150,17 @@ section {
     .header {
         text-align: center;
     }
-
+    .sample {
+        position: center;
+    }
+    #navbar, #navbar li {
+        position: center;
+        float: left;
+    }
 }
+/* @media screen and (max-width: 806px) {
+    #photo3 {
+        left: 75%;
+        float: right;
+    }
+} */
